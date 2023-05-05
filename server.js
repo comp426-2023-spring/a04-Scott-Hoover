@@ -3,6 +3,7 @@ import { rpsls } from "./lib/rpsls.js";
 import minimist from "minimist";
 
 import express from "express";
+const args = minimist(process.argv.slice(2));
 
 
 const app = express();
