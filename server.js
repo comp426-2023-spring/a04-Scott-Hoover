@@ -10,13 +10,15 @@ const port = args.port || 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 //req 3 /app
-app.get("app/", (req, res) => {
+app.get("app/", function(req, res) => {
 	res.status(200).send(200 OK);
 }
 //404 not found
 
 // /app/rps
-
+app.get('/app/rps', function(req, res) {
+	    res.status(200).send(rps());
+});
 
 ///app/rpsls/
 
