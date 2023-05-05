@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Fourth",
   "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "node server.js --port=5555",
     "start": "node server.js"
