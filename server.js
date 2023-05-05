@@ -16,9 +16,6 @@ app.get("/app/", function(req, res) => {
 	res.status(200).send(200 OK);
 }
 //404 not found
-app.get("*", (req, res) => {
-	  res.status(404).send("404 NOT FOUND");
-})
 // /app/rps
 app.get("/app/rps", function(req, res) {
 	    res.status(200).send(rps());
@@ -51,7 +48,9 @@ app.get("/app/rps/play/:shot", (req, res) => {
 app.get("/app/rpsls/play/:shot", (req, res) => {
 	  res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
 })
-
+app.get("*", (req, res) => {
+	          res.status(404).send("404 NOT FOUND");
+})
 
 // /app/rpsls/play/(rock|paper|scissors)/
 
