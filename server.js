@@ -14,12 +14,12 @@ app.use(express.urlencoded({extended: true}));
 //req 3 /app
 app.get("/app/", (req, res) => {
 	res.status(200).send(200 OK);
-}
+})
 //404 not found
 // /app/rps
 app.get("/app/rps", (req, res) => {
 	    res.status(200).send(rps());
-});
+})
 
 ///app/rpsls/
 app.get("/app/rpsls/", (req, res) => {
